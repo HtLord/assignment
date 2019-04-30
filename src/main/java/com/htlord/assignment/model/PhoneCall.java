@@ -2,6 +2,7 @@ package com.htlord.assignment.model;
 
 import java.util.UUID;
 
+// POJO
 public class PhoneCall {
     private UUID id;
     private Priority level;
