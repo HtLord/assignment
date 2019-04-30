@@ -18,7 +18,6 @@ $java -jar assignment-1.0-SNAPSHOT.jar
 or
 
 ````
-$java -jar assignment-1.0-SNAPSHOT.jar {numbers-of-freasher} 
-{numbers-of-team-leader} {numbers-of-product-manager}
+$java -jar assignment-1.0-SNAPSHOT.jar {numbers-of-freasher} {numbers-of-team-leader} {numbers-of-product-manager}
 ````
 Then it will dumping hole process and exit.
