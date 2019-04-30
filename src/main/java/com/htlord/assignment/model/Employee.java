@@ -51,7 +51,9 @@ public class Employee implements Callable{
         }catch (Exception e){}
     }
 
-    //
+    // Implement callable for achieve multi-thread. While employee is free meanwhile
+    // it is not occupied thread. Then get phone call from phone call pool try to
+    // solve the phone call.
     public Integer call(){
         // Pull phone call
         PhoneCallPool pcp = PhoneCallPool.getInstance();

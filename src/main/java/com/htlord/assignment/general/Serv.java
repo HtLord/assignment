@@ -12,28 +12,28 @@ public class Serv {
     static int MAX_FR = 3;
     static int MAX_TL = 1;
     static int MAX_PM = 1;
-    static int PHONE_NUMB = 10;
+    static int PHONE_CALL_NUMB = 5;
 
     // Start to simulate call center.
     public static void main(String[] args) throws Exception{
         try {
-            if (args.length == 3) {
+            if (args.length == 4) {
                 MAX_FR = Integer.valueOf(args[0]);
                 MAX_TL = Integer.valueOf(args[1]);
                 MAX_PM = Integer.valueOf(args[2]);
-                PHONE_NUMB = Integer.valueOf(args[3]);
-                return;
+                PHONE_CALL_NUMB = Integer.valueOf(args[3]);
             }
         }catch (Exception e){
             throw new Exception("Error input args");
         }
+        System.out.printf("FR(%d), TL(%d), PM(%d), PC(%d)\n", MAX_FR, MAX_TL, MAX_PM, PHONE_CALL_NUMB);
 
         ModelGenerator mg = new ModelGenerator();
 
         // Generate phone call
         // Add phone call into pool for sharing data
         PhoneCallPool pcp = PhoneCallPool.getInstance();
-        List<PhoneCall> pcc1 = mg.generatePhoneCalls(PHONE_NUMB);
+        List<PhoneCall> pcc1 = mg.generatePhoneCalls(PHONE_CALL_NUMB);
         pcp.importPC(pcc1);
 
         // Generate employees
